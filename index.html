@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para la titina <3 </title>
+        <link rel="icon" href="./imagenes/corazon.jpg" type="image/x-icon">
+
+    <style>
+        body {
+            font-family: 'Georgia', serif; /* Cambia la fuente a Georgia */
+            text-align: center;
+            margin: 0;
+            background: url(./imagenes/fondo\ para\ tu\ iPad\ o\ celular\ 📱.jpeg) no-repeat center center fixed;
+            background-size: cover;
+            color: rgb(20, 6, 6);
+            overflow-y: scroll;
+        }
+
+        /* El resto del CSS permanece igual */
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+        }
+
+        .polaroid {
+            display: inline-block;
+            background: white;
+            padding: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            margin: 20px;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .polaroid img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        .polaroid:hover {
+            transform: rotate(5deg) scale(1.1);
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .caption {
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .animated-title {
+            font-size: 60px;
+            font-weight: bold;
+            color: #1d1470;
+            position: relative;
+            animation: floatTitle 3s infinite ease-in-out;
+        }
+
+        @keyframes floatTitle {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+            .sticky-container {
+                position: fixed;
+                bottom: 10px;
+                right: 10px;
+                z-index: 1000;
+                transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            }
+        
+            .sticky-image {
+                width: 12vw; /* Ajusta dinámicamente según el ancho de la pantalla */
+                max-width: 150px; /* Tamaño máximo */
+                height: auto;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                cursor: pointer;
+                transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            }
+        
+            .sticky-image:hover {
+                transform: scale(1.1) rotate(5deg);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+            }
+        
+            .hidden {
+                opacity: 0;
+                transform: scale(0.8);
+                pointer-events: none;
+            }
+        
+            .toggle-btn {
+                position: fixed;
+                bottom: 15px;
+                right: 15px;
+                background: rgba(0, 0, 0, 0.7);
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+                cursor: pointer;
+                z-index: 1001;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background 0.3s ease-in-out;
+            }
+            .toggle-btn:hover {
+                background: rgba(0, 0, 0, 0.9);
+            }
+        </style>
+        
+        <div class="sticky-container">
+            <img src="./imagenes/25 imágenes geek para expresar tu amor y algunos consejos - Paperblog (1).jpeg" alt="Imagen Geek" class="sticky-image" id="stickyImage">
+        </div>
+        
+        <button class="toggle-btn" id="toggleButton">👀</button>
+        
+        <script>
+            const stickyImage = document.getElementById('stickyImage');
+            const toggleButton = document.getElementById('toggleButton');
+        
+            toggleButton.addEventListener('click', () => {
+                stickyImage.classList.toggle('hidden');
+            });
+        </script>
+        
+    
+</head>
+<body>
+
+    <canvas id="particlesCanvas"></canvas>
+    <canvas id="fireworksCanvas"></canvas>
+
+    <div class="content">
+        <h1 class="animated-title">PARA MI AMOR</h1>
+        <p> <strong>Hoy quiero expresarte con todo mi corazón cuánto te amo. Desde el primer momento en que te vi, supe que eras especial. Tu sonrisa ilumina mis días y tu amor me da fuerzas. Cada momento a tu lado es un tesoro que valoro inmensamente. Eres mi confidente, mi compañera y mi gran amor. No hay palabras suficientes para describir la profundidad de mis sentimientos por ti. Te amo más de lo que jamás imaginé posible y prometo amarte y cuidarte cada día más.
+
+            Sabes que desde la primera vez que te vi, quedé flechado por tu sonrisa, y eso me volvió loco. Nunca me había sentido así. Tu mirada me conquistó desde el primer instante, y tu forma de ser hizo que te convirtieras en la expresión más hermosa de la dulzura, conquistando y adueñándote de mi corazón por completo.
+            
+            Aunque no hace tanto que nos conocemos, siento que ha pasado una eternidad, y sé que con el pasar del tiempo nuestro amor crecerá más y más. Hoy todo mi ser te pertenece y mi alma está rendida a tus pies. Te confieso que te amo tanto que ya no sé cómo sería una vida sin ti. No puedo imaginarme un segundo sin esa sonrisa que alegra mis días.
+            
+            ¿Qué haría yo sin tu amor? ¿Cómo sobreviviría sin tenerte a mi lado? Contigo he comprendido que ya nada me falta, tú llenas cada espacio de mi existencia. Eres quien le da sentido a mi vida, eres mi sol, mi cielo, el amor que siempre soñé.
+            
+            Cada mañana me despierto con una sonrisa, sabiendo que estás a mi lado en esta hermosa vida. Me haces feliz como nunca pensé que sería posible.
+            
+            Además, quiero que recuerdes siempre lo increíble que eres. Eres la chica más fuerte del mundo y estoy seguro de que puedes con todo lo que te propongas, sin importar lo que pase. Tu valentía y determinación me inspiran cada día. Admiro profundamente tu fuerza y la manera en que enfrentas cada desafío.
+            
+            Te amo y te amaré con cada latido de mi corazón. No importa cuánto tiempo pase, siempre estaré a tu lado, apoyándote, cuidándote y amándote con toda mi alma.
+            
+            Con todo mi amor</strong></p>
+
+        <div class="polaroid" id="image1">
+            <img src="./imagenes/4.jpg" alt="Imagen 1">
+            <div class="caption"></div>
+        </div>
+        <div class="polaroid" id="image2">
+            <img src="./imagenes/6.jpg" alt="Imagen 2">
+            <div class="caption"></div>
+        </div>
+        <div class="polaroid" id="image2">
+            <img src="./imagenes/2.jpg" alt="Imagen 2">
+            <div class="caption"></div>
+        </div>
+        <div class="polaroid" id="image2">
+            <img src="./imagenes/1.jpg" alt="Imagen 2">
+            <div class="caption"></div>
+        </div>
+        <div class="polaroid" id="image2">
+            <img src="./imagenes/5.jpg" alt="Imagen 2">
+            <div class="caption"></div>
+        </div>
+        <div class="polaroid" id="image2">
+            <img src="./imagenes/7.jpg" alt="Imagen 2">
+            <div class="caption"></div>
+        </div>
+    </div>
+
+    <script>
+        // Animación de las imágenes con JavaScript
+        const polaroids = document.querySelectorAll('.polaroid');
+
+        polaroids.forEach((polaroid) => {
+            let offsetX = Math.random() * 50 - 25;
+            let offsetY = Math.random() * 50 - 25;
+
+            polaroid.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+
+            polaroid.addEventListener('mouseenter', () => {
+                offsetX = Math.random() * 50 - 25;
+                offsetY = Math.random() * 50 - 25;
+                polaroid.style.transition = 'transform 0.5s ease, box-shadow 0.5s ease';
+                polaroid.style.transform = `translate(${offsetX}px, ${offsetY}px) rotate(5deg) scale(1.1)`;
+            });
+
+            polaroid.addEventListener('mouseleave', () => {
+                polaroid.style.transition = 'transform 0.5s ease, box-shadow 0.5s ease';
+                polaroid.style.transform = `translate(${offsetX}px, ${offsetY}px) rotate(0deg) scale(1)`;
+            });
+        });
+
+        // Configuración del canvas de partículas
+        const particlesCanvas = document.getElementById("particlesCanvas");
+        const ctxParticles = particlesCanvas.getContext("2d");
+
+        function resizeCanvas() {
+            particlesCanvas.width = window.innerWidth;
+            particlesCanvas.height = window.innerHeight;
+        }
+
+        resizeCanvas();
+        window.addEventListener("resize", resizeCanvas);
+
+        let particlesArray = [];
+        const numParticles = 200;
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * particlesCanvas.width;
+                this.y = Math.random() * particlesCanvas.height;
+                this.size = Math.random() * 4 + 1;
+                this.speedX = Math.random() * 2 - 1;
+                this.speedY = Math.random() * 2 - 1;
+                this.opacity = Math.random() * 0.5 + 0.3;
+                this.color = `hsl(${Math.random() * 360}, 100%, 70%)`;
+            }
+
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x < 0 || this.x > particlesCanvas.width) this.speedX *= -1;
+                if (this.y < 0 || this.y > particlesCanvas.height) this.speedY *= -1;
+            }
+
+            draw() {
+                ctxParticles.globalAlpha = this.opacity;
+                ctxParticles.fillStyle = this.color;
+                ctxParticles.beginPath();
+                ctxParticles.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctxParticles.fill();
+            }
+        }
+
+        function initParticles() {
+            for (let i = 0; i < numParticles; i++) {
+                particlesArray.push(new Particle());
+            }
+        }
+
+        function animateParticles() {
+            ctxParticles.clearRect(0, 0, particlesCanvas.width, particlesCanvas.height);
+            particlesArray.forEach(particle => {
+                particle.update();
+                particle.draw();
+            });
+            requestAnimationFrame(animateParticles);
+        }
+
+        initParticles();
+        animateParticles();
+
+        // Fuegos Artificiales
+        const fireworksCanvas = document.getElementById("fireworksCanvas");
+        const ctxFireworks = fireworksCanvas.getContext("2d");
+
+        function resizeFireworksCanvas() {
+            fireworksCanvas.width = window.innerWidth;
+            fireworksCanvas.height = window.innerHeight;
+        }
+
+        resizeFireworksCanvas();
+        window.addEventListener("resize", resizeFireworksCanvas);
+
+        class Firework {
+            constructor(x, y) {
+                this.particles = [];
+                let a = 80;
+                let k = 5;
+                for (let i = 0; i < 200; i++) {
+                    let angle = (Math.PI * 2 * i) / 200;
+                    let radius = a * Math.sin(k * angle);
+                    let color = `hsl(${Math.random() * 30 + 330}, 100%, 70%)`;
+                    this.particles.push(new ParticleFirework(x, y, angle, radius, color));
+                }
+            }
+            update() {
+                this.particles.forEach(p => p.update());
+            }
+            draw() {
+                this.particles.forEach(p => p.draw());
+            }
+        }
+
+        class ParticleFirework {
+            constructor(x, y, angle, radius, color) {
+                this.x = x + radius * Math.cos(angle);
+                this.y = y + radius * Math.sin(angle);
+                this.vx = (Math.random() - 0.5) * 1.5;
+                this.vy = (Math.random() - 0.5) * 1.5;
+                this.alpha = 1;
+                this.size = Math.random() * 2 + 1;
+                this.color = color;
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                this.alpha -= 0.01;
+            }
+            draw() {
+                ctxFireworks.globalAlpha = this.alpha;
+                ctxFireworks.fillStyle = this.color;
+                ctxFireworks.beginPath();
+                ctxFireworks.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctxFireworks.fill();
+            }
+        }
+
+        let fireworks = [];
+
+        function animateFireworks() {
+            ctxFireworks.clearRect(0, 0, fireworksCanvas.width, fireworksCanvas.height);
+            fireworks.forEach((firework, index) => {
+                firework.update();
+                firework.draw();
+                if (firework.particles.every(p => p.alpha <= 0)) {
+                    fireworks.splice(index, 1);
+                }
+            });
+            requestAnimationFrame(animateFireworks);
+        }
+
+        // Fuegos artificiales automáticos
+        setInterval(() => {
+            const x = Math.random() * fireworksCanvas.width;
+            const y = Math.random() * fireworksCanvas.height;
+            fireworks.push(new Firework(x, y));
+        }, 1000);
+
+        animateFireworks();
+    </script>
+</body>
+</html> 
